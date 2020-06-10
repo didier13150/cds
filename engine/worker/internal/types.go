@@ -135,7 +135,6 @@ func (wk *CurrentWorker) SendLog(ctx context.Context, level workerruntime.Level,
 		log.Error(ctx, "unable to sign logs: %v", err)
 	}
 	wk.logger.stepLogger.WithField(log.ExtraFieldSignature, signature).Log(logLevel, s)
-
 }
 
 func (wk *CurrentWorker) Name() string {
